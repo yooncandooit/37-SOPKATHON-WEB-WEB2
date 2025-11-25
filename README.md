@@ -51,7 +51,6 @@ MIDI MATE는 매일 주어진 점심 시간을 언어 교류의 기회로 바꿔
 | **Language** | ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white) |
 | **Styling** | ![Vanilla Extract](https://img.shields.io/badge/Vanilla%20Extract-DB7093?style=for-the-badge&logoColor=white) |
 | **Data Fetching** | ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=Axios&logoColor=white) ![TanStack Query](https://img.shields.io/badge/TanStack%20Query-FF4154?style=for-the-badge&logo=react-query&logoColor=white) |
-| **State** | ![Zustand](https://img.shields.io/badge/Zustand-433E38?style=for-the-badge&logoColor=white) |
 | **Formatting** | ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white) ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=white) |
 | **Package** | ![pnpm](https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white) |
 | **Deploy** | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=Vercel&logoColor=white) |
@@ -115,27 +114,106 @@ git merge develop
 
 ---
 
-## 📁 폴더 구조
+## 📁 FSD 폴더 구조
 
 ```
-├── src
-│   ├── apps                      # 앱 초기화 및 진입점
-│   ├── constant                  # 전역 상수 (Query Key, API URL)
-│   ├── pages                     # 라우트별 페이지 컴포넌트
-│   ├── router                    # 라우팅 설정
-│   │   └── constant              # 라우트 경로 상수
-│   ├── shared                    # 공유 리소스
-│   │   ├── apis                  # API 인스턴스 및 함수
-│   │   ├── assets                # 이미지, 폰트 등 정적 파일
-│   │   ├── components            # 재사용 UI 컴포넌트
-│   │   ├── hooks                 # 커스텀 훅
-│   │   ├── icons                 # SVG 아이콘 export
-│   │   ├── query                 # TanStack Query 설정
-│   │   ├── styles                # 전역 스타일 및 테마
-│   │   │   └── token             # 디자인 토큰 (color, typography 등)
-│   │   ├── types                 # TypeScript 타입 정의
-│   │   └── utils                 # 유틸리티 함수
-│   └── widgets                   # 페이지 단위 복합 컴포넌트
+├── package-lock.json             # 종속성(Dependency)의 정확한 버전 명세 파일
+├── package.json                  # 프로젝트의 메타데이터, 스크립트, 설치된 패키지 목록 정의
+├── pnpm-lock.yaml                # pnpm 패키지 매니저의 종속성 잠금 파일
+├── public                        # 💡 웹 서버에 의해 직접 제공되는 정적 파일 (빌드되지 않음)
+│   └── logo.svg                  # 웹사이트 로고 등의 정적 이미지 파일
+├── src                           # 💡 애플리케이션의 모든 소스 코드
+│   ├── apps                      # 애플리케이션의 핵심 진입점 및 루트 컴포넌트
+│   │   ├── App.tsx               # 애플리케이션의 최상위 컴포넌트
+│   │   └── main.tsx              # React 애플리케이션의 렌더링 시작점 (root)
+│   ├── constant                  # 전역적으로 사용되는 상수 값들
+│   │   ├── query-key.ts          # 데이터 쿼리 라이브러리 (React Query 등)의 키 정의
+│   │   └── url.ts                # API 엔드포인트 또는 라우트 경로 상수 정의
+│   ├── features                  # 💡 특정 도메인(기능)의 비즈니스 로직 (주로 Custom Hooks)
+│   │   ├── matching              # 매칭 기능 관련 로직
+│   │   │   └── hooks             # 매칭 관련 상태 관리 및 비즈니스 로직을 담은 훅
+│   │   │       └── use-matching-info.ts
+│   │   └── onboarding            # 온보딩 기능 관련 로직
+│   │       └── hooks             # 온보딩 관련 상태 관리 및 비즈니스 로직을 담은 훅
+│   │           └── use-onboarding.ts
+│   ├── pages                     # 💡 라우팅되는 화면 단위의 컴포넌트
+│   │   ├── home.tsx              # 메인/홈 페이지
+│   │   ├── matching-complete     # 매칭 완료 페이지 폴더
+│   │   │   ├── matching-complete.css.ts # 스타일 파일
+│   │   │   └── matching-complete.tsx    # 컴포넌트 파일
+│   │   ├── matching-page         # 매칭 진행 페이지 폴더
+│   │   │   ├── matching-page.css.ts
+│   │   │   └── matching-page.tsx
+│   │   ├── matching-progress     # 매칭 로딩/진행 상태 페이지 폴더
+│   │   │   ├── matching-progress.css.ts
+│   │   │   └── matching-progress.tsx
+│   │   ├── on-boarding           # 온보딩 페이지 폴더
+│   │   │   ├── on-boarding.css.ts
+│   │   │   └── on-boarding.tsx
+│   │   └── review-page           # 리뷰 페이지 폴더
+│   │       ├── index.ts          # 페이지 진입점 및 내보내기 (export)
+│   │       ├── review-page.css.ts
+│   │       └── review-page.tsx
+│   ├── router                    # 애플리케이션 라우팅 시스템 구성
+│   │   ├── constant              # 라우터 관련 상수 (경로, AppBar 설정 등)
+│   │   │   ├── app-bar-config.ts # 상단바(AppBar) 관련 설정
+│   │   │   └── routes.ts         # 모든 라우트 경로 정의
+│   │   ├── global-routes.tsx     # 전역 라우트 설정 컴포넌트
+│   │   ├── layout.tsx            # 공통 레이아웃 (header, footer 등) 정의
+│   │   ├── lazy.tsx              # 동적 임포트(Lazy Loading) 헬퍼
+│   │   └── router.tsx            # 라우터 인스턴스 생성 및 설정
+│   ├── shared                    # 💡 애플리케이션 전체에서 공유되는 요소 (재사용성)
+│   │   ├── apis                  # 백엔드 API 통신 로직
+│   │   │   ├── instance.ts       # Axios 등 HTTP 클라이언트 인스턴스 설정
+│   │   │   ├── matching          # 매칭 관련 API 호출 함수
+│   │   │   │   └── matching.ts
+│   │   │   ├── method.ts         # API 요청 메소드 정의 (GET, POST 등)
+│   │   │   ├── onboarding        # 온보딩 관련 API 호출 함수
+│   │   │   │   └── onboarding.ts
+│   │   │   └── questions.ts      # 질문 관련 API
+│   │   ├── assets                # 정적 자산 (아이콘, 이미지)
+│   │   │   ├── icons             # SVG 등 아이콘 파일
+│   │   │   │   └── ...
+│   │   │   └── images            # PNG, JPG 등 일반 이미지 파일
+│   │   │       └── ...
+│   │   ├── components            # 💡 재사용 가능한 **기본 단위** UI 컴포넌트 (Design System 요소)
+│   │   │   ├── app-bar           # 상단바 (AppBar) 컴포넌트
+│   │   │   │   └── ...
+│   │   │   ├── button            # 버튼 컴포넌트
+│   │   │   │   └── ...
+│   │   │   ├── flip-card         # 플립 카드 컴포넌트
+│   │   │   │   └── ...
+│   │   │   └── modal             # 모달 컴포넌트
+│   │   │       └── ...
+│   │   ├── hooks                 # 범용적인 커스텀 훅 (현재 비어있으나, 공통 훅 위치)
+│   │   ├── icons                 # (현재 비어있음) 아이콘 관련 로직 또는 컴포넌트 위치 가능
+│   │   ├── query                 # 데이터 쿼리 관련 설정 및 프로바이더
+│   │   │   └── query-provider.tsx # React Query Provider 등
+│   │   ├── styles                # 전역 스타일 및 테마 시스템
+│   │   │   ├── global.css.ts     # 전역 CSS 스타일
+│   │   │   ├── reset.css.ts      # CSS 초기화 스타일
+│   │   │   ├── theme-provider.tsx# 테마 적용 Provider
+│   │   │   ├── theme.css.ts      # 테마 설정
+│   │   │   └── token             # 디자인 토큰 (Design Tokens) 정의
+│   │   │       ├── color.css.ts  # 색상 토큰
+│   │   │       └── ...
+│   │   ├── types                 # 전역적으로 사용되는 TypeScript 타입 정의
+│   │   │   └── api.ts            # API 데이터 구조 타입
+│   │   └── utils                 # 범용적인 헬퍼(Helper) 함수
+│   │       └── language.ts       # 언어 처리 유틸리티
+│   ├── vite-env.d.ts             # Vite 환경 변수 타입 정의
+│   ├── vite-env.override.d.ts    # 환경 변수 재정의 타입 정의
+│   └── widgets                   # 💡 여러 컴포넌트를 조합한 복합적인 UI (Feature-specific)
+│       ├── matching-form         # 매칭 설정을 위한 폼 위젯
+│       │   ├── constants         # 폼 내부에서 사용되는 상수
+│       │   │   └── option.ts
+│       │   └── ...
+│       └── review-form           # 리뷰 작성을 위한 폼 위젯
+│           └── ...
+├── tsconfig.app.json             # 앱 관련 TypeScript 설정
+├── tsconfig.json                 # 기본 TypeScript 설정
+├── tsconfig.node.json            # Node 환경(빌드 설정 등) TypeScript 설정
+└── vite.config.ts                # Vite 번들러의 설정 파일
 ```
 
 <br />
@@ -185,20 +263,7 @@ git merge develop
 > - 열정 !!
 ---
 
-## 📖 아티클 모음
-
-| 이름 | 아티클 |
-|:---:|:---|
-| 박소현 | |
-| 김윤지 | |
-| 양승혜 | |
-| 박진석 | |
-
-<br />
-
-
-
-## ✨ Before & After
+## ✨ 웹계인 Before & After
 
 <table>
   <tr>
