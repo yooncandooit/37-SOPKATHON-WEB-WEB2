@@ -7,8 +7,23 @@ MIDI MATE는 매일 주어진 점심 시간을 언어 교류의 기회로 바꿔
 > 해당 저장소는 **MIDI MATE**의 **프론트엔드 개발**을 담당하는 레포지토리입니다.
 
 <br />
+<img width="2880" height="1620" alt="0" src="https://github.com/user-attachments/assets/21191826-acb8-4f6d-a9e7-e1ab351326e3" />
+<img width="2880" height="1620" alt="1" src="https://github.com/user-attachments/assets/3a636946-2921-4deb-8525-c26da2a77979" />
+<img width="2880" height="1620" alt="2" src="https://github.com/user-attachments/assets/b23cc613-a094-4751-a0cc-239d4f09c5c5" />
+<img width="2880" height="1620" alt="3" src="https://github.com/user-attachments/assets/43e7a8bf-1c8d-4329-af61-ecfe912f8767" />
+<img width="2880" height="1620" alt="4" src="https://github.com/user-attachments/assets/e9bb01a5-5baa-4407-a871-0c0318976eb2" />
+<img width="2880" height="1620" alt="5" src="https://github.com/user-attachments/assets/6f96b912-29e8-4125-bdb3-86b867813b58" />
+<img width="2880" height="1620" alt="6" src="https://github.com/user-attachments/assets/01a9e9a9-761b-4b72-9ca7-02190e4032d5" />
+<img width="2880" height="1620" alt="7" src="https://github.com/user-attachments/assets/da95be63-e1c5-4017-bf30-0742e724c6c0" />
+<img width="2880" height="1620" alt="8" src="https://github.com/user-attachments/assets/f31d980c-2fdb-4260-ae1f-9b085450442b" />
+<img width="2880" height="1620" alt="9" src="https://github.com/user-attachments/assets/e4f7a4eb-9875-45f0-bca5-eb708f36f913" />
+<img width="2880" height="1620" alt="10" src="https://github.com/user-attachments/assets/139ec25f-4db7-4335-a61f-0f212cfb41c0" />
+<img width="2880" height="1620" alt="11" src="https://github.com/user-attachments/assets/0a1d6e2b-2708-49b3-96e1-0eb3b0bc0294" />
+<img width="2880" height="1620" alt="12" src="https://github.com/user-attachments/assets/7495e366-e5c0-4ef8-b5c1-ff89ebbec068" />
+<img width="2880" height="1620" alt="13" src="https://github.com/user-attachments/assets/5576c551-3e62-480f-8307-4c7b14e3c5bd" />
+<img width="2880" height="1620" alt="14" src="https://github.com/user-attachments/assets/9eaeb92e-ee9b-4889-a89c-ba5470855b00" />
 
-<img width="1440" height="810" alt="0" src="https://github.com/user-attachments/assets/eb55e540-a4ae-4138-9f02-b49dbc11cca2" /> <img width="1440" height="810" alt="1" src="https://github.com/user-attachments/assets/c73f9ee2-ca8b-483d-afa7-4504e210a7a0" /> <img width="1440" height="810" alt="2" src="https://github.com/user-attachments/assets/dd850df5-e82e-463d-b047-912edba04f23" /> <img width="1440" height="810" alt="3" src="https://github.com/user-attachments/assets/957441ba-78a9-482a-980a-afe6fb77e91e" /> <img width="1440" height="810" alt="4" src="https://github.com/user-attachments/assets/d12fd9ba-fb1a-4f6f-ba22-9f5af68dd233" /> <img width="1440" height="810" alt="5" src="https://github.com/user-attachments/assets/032996c2-41f7-4070-a312-45ca7d5f09db" /> <img width="1440" height="810" alt="6" src="https://github.com/user-attachments/assets/1ea20ce7-0033-45de-9654-45da3caf9a85" /> <img width="1440" height="810" alt="7" src="https://github.com/user-attachments/assets/b2f24e23-35c3-45bc-910f-0cdf329ca810" /> <img width="1440" height="810" alt="8" src="https://github.com/user-attachments/assets/4669b692-995a-4229-92f1-edcb977b80df" /> <img width="1440" height="810" alt="9" src="https://github.com/user-attachments/assets/09ad9ebd-bc48-4073-8b6d-00baee2896c3" /> <img width="1440" height="810" alt="10" src="https://github.com/user-attachments/assets/bc2657fa-55d0-4c82-8aed-6beea0c2c6ac" /> <img width="1440" height="810" alt="11" src="https://github.com/user-attachments/assets/10a93a96-c330-43b5-91d2-2f3b745bafb2" /> <img width="1440" height="810" alt="12" src="https://github.com/user-attachments/assets/7f413ea4-65f6-4aa2-98c9-a1bc53f08ab8" /> <img width="1440" height="810" alt="13" src="https://github.com/user-attachments/assets/563adce5-6d31-4812-9501-d4a95d7ff885" /> <img width="1440" height="810" alt="14" src="https://github.com/user-attachments/assets/566bca43-8471-4b0d-8394-d6b502c1f93b" />
+
 ## ❗️ 주요 기능
 > **1. 맞춤형 정보 입력**
 > - 언어 :구사 가능 언어 / 학습 희망 언어 교차 선택
